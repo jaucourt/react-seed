@@ -1,0 +1,4 @@
+test/integration/config/*
+test/integration/fixtures/*
+test/results/*
+test/unit/fixtures/*

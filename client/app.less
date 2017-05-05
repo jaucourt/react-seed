@@ -1,0 +1,30 @@
+@import (less) "./reset.less";
+@import (less) "./theme.less";
+
+body {
+	background-color: @palette_colour_2;
+	font-family: @theme_font_1;
+}
+
+h1 { font-size: @font_size_xxl; }
+h2 { font-size: @font_size_xl; }
+h3 { font-size: @font_size_l; }
+h4 { font-size: @font_size_m; }
+h5 { font-size: @font_size_s; }
+h6 { font-size: @font_size_xs; }
+
+.loading {
+	height: 60px;
+	margin: 0 auto;
+	width: 60px;
+	background: transparent @loading_spinner no-repeat bottom center;
+	animation: spin 1s linear infinite;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.errorMessage {
+	color: @palette_colour_3;
+}

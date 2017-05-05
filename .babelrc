@@ -1,0 +1,13 @@
+{
+	"presets": ["es2015", "stage-3", "react"],
+	"plugins": [
+		"transform-class-properties",
+		"transform-decorators-legacy",
+		[
+			"react-intl", {
+				"messagesDir": "./client/resources/messages",
+				"enforceDescriptions": false
+			}
+		]
+	]
+}

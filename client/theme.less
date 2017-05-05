@@ -1,0 +1,113 @@
+@palette_colour_1: #bada55;
+@palette_colour_2: #d3d3d3;
+@palette_colour_3: #cc0000;
+@palette_colour_4: #ffffff;
+@palette_colour_5: #000000;
+/*
+Fonts
+
+Markup:
+<p style="font-family: {$modifiers};">{$modifiers}</p>
+*/
+@font-face {
+	font-family: Open_Sans_Light;
+	src: url(fonts/opensans-light.woff);
+}
+@font-face {
+	font-family: Open_Sans_Regular;
+	src: url(fonts/opensans-regular.woff);
+}
+@font-face {
+	font-family: Open_Sans_Semibold;
+	src: url(fonts/opensans-semibold.woff);
+}
+@font-face {
+	font-family: FontAwesome;
+	src: url(fonts/fontawesome-webfont.woff);
+}
+
+@theme_font_1: Open_Sans_Regular, Helvetica, Arial, sans-serif;
+@theme_font_2: Open_Sans_Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+@theme_font_3: Open_Sans_Semibold, Helvetica, Arial, sans-serif;
+@theme_font_icons: FontAwesome;
+/*
+Font Sizes
+
+These are the font sizes used for the website.
+
+Markup:
+<p style="font-size: {$modifiers};">{$modifiers}</p>
+
+Styleguide 1.2
+*/
+@font_size_xxxl: 36px;
+@font_size_xxl: 28px;
+@font_size_xl: 24px;
+@font_size_l: 20px;
+@font_size_m: 18px;
+@font_size_s: 16px;
+@font_size_xs: 14px;
+@font_size_xxs: 12px;
+/*
+images
+*/
+@loading_spinner: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAMAAAANIilAAAAAA3NCSVQICAjb4U/gAAAAY1BMVEX///+dnZ0AndydnZ0AndydnZ0AndydnZ0AndydnZ0AndydnZ0AndydnZ0AndydnZ0AndydnZ0AndydnZ0AndydnZ0AndydnZ0AndydnZ0AndydnZ0AndydnZ1AnsMHndkAndx62i49AAAAIXRSTlMAEREiIjMzRERVVWZmd3eIiJmZqqq7u8zM3d3u7v////9elsR9AAAACXBIWXMAAAsSAAALEgHS3X78AAAAFnRFWHRDcmVhdGlvbiBUaW1lADE3LzExLzE2YnQD0QAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAIySURBVEiJzVbbloMgDASptdZaV61FxOzm/79yg3jtegGfdl5ogTkZJgHD2D8DT0qpNfwgYtu8Hxd3ZpgrsDDkDs3TjR9WhqarLIkEDy7XR1G3RsDrekwtNYDKw+XstTD81350nhFVxisrwb2m6F87XCEpasI3Vh8N4nszeEQ+ZVtUE70g527ra4kGtaZ4HrzF9r62ENNpw7WFOW4NtiuxIw1yR/KAoMbmT85C4opjLmWtxvbDNS5BH2ru2ZTwYDGTgT7wasK9xef8P4nOXLmMvbCZC69AOR3Y4tLgaxE4cedSuhEnxyunLE0IGnwPvwWAs1tj6MFwstqPy9hkuPKx2uKFtf1Bqj2strhha3Un/qpZ0KK9XSVU3mRWY9GNJ47MWNEf2rNCLJ7Y9OTIn3zHthtPmE31PZK9atMiQDxP5t/fPfmE7BCgGzU4PkBzxH1lnUpVBqobTxVJCbIfT5SnhLIbz1wMNrwfdCW9HYvG/CrIfcnDkSfn3MGnDAnt+wCSTWNVVqMIx8Cq99og9Hx708VXsZzJcAo8d5iy5WE4hVpcpdRDOO1NlzP0nXSsFOo/yo8poT60bIE2/v0qhi7NEG1Tq/1HrB3aEurz9OpbS4c5akwSai833mnTPuY7+RYl7NgqqNXWW28ST6kjLvdqyWxQ8dqOhGSpdL8OOUmjZj1a7OKRaeF1fpzLrtcHLcs0DjkXcZpLMwGV2+suUrt9gpYHgpfq41wqbbRqJT8O8R/wCw9jK95tQ819AAAAAElFTkSuQmCC");
+
+/*
+animations
+*/
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+/*
+Media Queries
+*/
+@web_full: ~"screen and (min-width: 970px)";
+@web_compact: ~"screen and (min-width: 724px) and (max-width: 969px)";
+@web_sub_compact: ~"screen and (min-width: 478px) and (max-width: 723px)";
+@web_smallest: ~"screen and (max-width: 477px)";
+@portrait: ~" and (orientation: portrait)";
+@landscape: ~" and (orientation: landscape)";
+
+/*
+Widths.
+*/
+@width_full: 970px;
+@width_compact: 724px;
+@width_sub_compact: 478px;
+@width_smallest: 232px;
+
+.hidden {
+	display: none!important;
+}
+
+.pageWidths() {
+	@media @web_full {
+		& {
+			width: @width_full;
+		}
+	}
+	@media @web_compact {
+		& {
+			width: @width_compact;
+		}
+	}
+	@media @web_sub_compact {
+		& {
+			width: @width_sub_compact;
+		}
+	}
+	@media @web_smallest {
+		& {
+			width: @width_smallest;
+		}
+	}
+}
+
+body {
+	padding: 10px;
+}
